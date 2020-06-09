@@ -7,7 +7,7 @@ clc;
 
 %Constant Parameters
 k = 3; %number of clusters
-max_dist = 32; %k-nearest neighbor distance
+max_dist = 64; %k-nearest neighbor distance
 sig1 = 10; %Similarity function sigma 1 
 sig2 = 15; %Similarity function sigma 2 
 
@@ -24,7 +24,7 @@ figure(2);
 imshow(imresize(image, [512 512]));
 
 %Downscale and reshape image for processing
-image = imresize(image, [64 64]);
+image = imresize(image, [128 128]);
 image = cast(reshape(image,size(image,1)^2,1),'double');
 
 
